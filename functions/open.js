@@ -3,7 +3,7 @@ const getFileType = require('./fileType');
 const defaultConfigs = {
   title: '',
   width: '100%',
-  height: '100%',
+  height: 'auto',
 };
 
 /**
@@ -31,15 +31,16 @@ const open = (blob, configs = defaultConfigs) => {
 
       iframe.src = blob;
 
-      iframe.style.width = width;
-      iframe.style.height = height;
+      iframe.style.width = width || '100%';
+      iframe.style.height = height || '100%';
     } else {
       const image = tab.document.createElement('img');
 
       body.appendChild(image);
       image.src = blob;
 
-      image.style.width = width;
+      image.style.width = width || '100%';
+      image.style.height = height || 'auto';
       image.style.display = 'block';
       image.style.margin = '0 auto';
     }
