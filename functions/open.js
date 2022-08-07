@@ -40,7 +40,7 @@ const open = (blob, configs = defaultConfigs) => {
 
       body.appendChild(iframe);
 
-      iframe.src = src;
+      iframe.src = blob;
 
       iframe.style.width = width;
       iframe.style.height = height;
@@ -53,7 +53,7 @@ const open = (blob, configs = defaultConfigs) => {
       const image = tab.document.createElement('img');
 
       body.appendChild(image);
-      image.src = src;
+      image.src = blob;
 
       image.style.width = width;
       image.style.display = 'block';
