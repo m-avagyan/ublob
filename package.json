@@ -1,0 +1,32 @@
+{
+  "name": "ublob",
+  "version": "0.0.5",
+  "description": "Helper module for working with files.",
+  "main": "index.js",
+  "keywords": [
+    "npm",
+    "yarn",
+    "module",
+    "javascript",
+    "react",
+    "files",
+    "blob",
+    "browser",
+    "easy"
+  ],
+  "author": "Martik Avagyan <martikavagyan1@gmail.com> (https://github.com/m-avagyan)",
+  "homepage": "https://github.com/m-avagyan/ublob#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-avagyan/ublob.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m-avagyan/ublob/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.0.0"
+  }
+}
