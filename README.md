@@ -49,6 +49,7 @@ import { open } from 'ublob';
 
 const handleOpen = (blob) =>
   open(blob, {
+    title: 'Ublob PDF',
     width: '100%',
     height: '100%',
   });

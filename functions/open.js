@@ -1,6 +1,7 @@
 const getFileType = require('./fileType');
 
 const defaultConfigs = {
+  title: '',
   width: '100%',
   height: '100%',
 };
@@ -8,7 +9,7 @@ const defaultConfigs = {
 /**
  *
  * @param { String } blob
- * @param { { newTab: Boolean, width: String, height: String } } configs
+ * @param { { title: String, width: String, height: String } } configs
  */
 
 const open = (blob, configs = defaultConfigs) => {
@@ -16,7 +17,11 @@ const open = (blob, configs = defaultConfigs) => {
   const body = tab.document.body;
   const fileType = getFileType(blob);
 
-  const { width, height } = configs;
+  const { title, width, height } = configs;
+
+  if (title) {
+    tab.document.title = title;
+  }
 
   setTimeout(() => {
     if (fileType === 'pdf') {
