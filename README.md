@@ -42,14 +42,13 @@ toBase64(file)
   );
 ```
 
-- `open`: open blob url to browser tab
+- `open`: open blob url in browser new tab
 
 ```javascript
 import { open } from 'ublob';
 
 const handleOpen = (blob) =>
   open(blob, {
-    newTab: true,
     width: '100%',
     height: '100%',
   });
