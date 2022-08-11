@@ -1,19 +1,24 @@
-const getFileType = require('./fileType');
+import getFileType from './fileType';
 
-const defaultConfigs = {
+type TConfigs = {
+  title?: string;
+  width?: string;
+  height?: string;
+};
+
+const defaultConfigs: TConfigs = {
   title: '',
   width: '100%',
   height: 'auto',
 };
 
-/**
- *
- * @param { String } blob
- * @param { { title: String, width: String, height: String } } configs
- */
-
-const open = (blob, configs = defaultConfigs) => {
+const open = (blob: string, configs = defaultConfigs): void | Error => {
   const tab = window.open('about:blank');
+
+  if (!tab) {
+    throw new Error('The tab is not opened.');
+  }
+
   const body = tab.document.body;
   const fileType = getFileType(blob);
 
@@ -47,4 +52,4 @@ const open = (blob, configs = defaultConfigs) => {
   }, 0);
 };
 
-module.exports = open;
+export default open;
