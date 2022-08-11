@@ -1,6 +1,6 @@
 {
   "name": "@m-avagyan/ublob",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Helper module for working with files.",
   "main": "src/index.ts",
   "keywords": [
