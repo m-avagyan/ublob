@@ -17,6 +17,7 @@ jobs:
       - run: yarn install
       - run: git config --global user.email "martikavagyan1@gmail.com"
       - run: git config --global user.name "m-avagyan"
-      - run: npm version minor && npm publish ublob
+      - run: npm version minor
+      - run: npm publish ublob
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
