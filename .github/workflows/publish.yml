@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  bump-version:
-    name: 'Bump Version on master'
+  publish:
+    name: 'Bump Version on master and publish to NPM'
     runs-on: ubuntu-latest
 
     steps:
@@ -30,9 +30,6 @@ jobs:
         env:
           NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
         run: echo "new tag $NEW_TAG"
-  build:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -43,3 +40,16 @@ jobs:
       - run: npm publish ublob
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 16
+  #         registry-url: https://registry.npmjs.org/
+  #     - run: git pull origin master
+  #     - run: yarn install
+  #     - run: npm publish ublob
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
