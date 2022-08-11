@@ -6,6 +6,30 @@ on:
       - master
 
 jobs:
+  bump-version:
+    name: 'Bump Version on master'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v2'
+        with:
+          ref: ${{ github.ref }}
+      - name: 'cat package.json'
+        run: cat ./package.json
+      - name: 'Automated Version Bump'
+        id: version-bump
+        uses: 'phips28/gh-action-bump-version@master'
+        with:
+          tag-prefix: 'v'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'cat package.json'
+        run: cat ./package.json
+      - name: 'Output Step'
+        env:
+          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+        run: echo "new tag $NEW_TAG"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -15,9 +39,6 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: yarn install
-      - run: git config --global user.email "martikavagyan1@gmail.com"
-      - run: git config --global user.name "m-avagyan"
-      - run: npm version patch
       - run: npm publish ublob
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
