@@ -1,8 +1,8 @@
 {
-  "name": "ublob",
-  "version": "0.1.0",
+  "name": "@m-avagyan/ublob",
+  "version": "0.2.0",
   "description": "Helper module for working with files.",
-  "main": "index.js",
+  "main": "src/index.ts",
   "keywords": [
     "npm",
     "yarn",
@@ -31,5 +31,11 @@
     "node": ">=8.0.0",
     "npm": ">=6.0.0",
     "yarn": ">=1.0.0"
+  },
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }
