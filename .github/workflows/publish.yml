@@ -14,8 +14,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: echo "@${secrets.OWNER}:registry=https://npm.pkg.github.com" > ~/.npmrc
-      - run: echo "//npm.pkg.github.com/:_authToken=${secrets.NODE_AUTH_TOKEN}" > ~/.npmrc
       - run: yarn install
       - run: npm publish
         env:
