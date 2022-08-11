@@ -1,10 +1,4 @@
-/**
- *
- * @param { File } file
- * @returns
- */
-
-const toBase64 = (file) => {
+const toBase64 = (file: File): Promise<string | ArrayBuffer | null> => {
   return new Promise((resolve, reject) => {
     const fileReader = new FileReader();
 
@@ -15,4 +9,4 @@ const toBase64 = (file) => {
   });
 };
 
-module.exports = toBase64;
+export default toBase64;

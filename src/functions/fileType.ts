@@ -1,10 +1,4 @@
-/**
- *
- * @param { String } blob
- * @returns
- */
-
-const getFileType = (blob) => {
+const getFileType = (blob: string): string | Error => {
   if (typeof blob !== 'string') {
     throw new Error('The parameter must be a blob string.');
   }
@@ -12,4 +6,4 @@ const getFileType = (blob) => {
   return blob.split('/')[1].split(';')[0];
 };
 
-module.exports = getFileType;
+export default getFileType;
