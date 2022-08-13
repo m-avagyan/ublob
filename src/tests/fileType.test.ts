@@ -23,8 +23,8 @@ describe('getting the file type', () => {
   });
 
   it('should return the file type', () => {
-    const fileType = getFileType(MOCKED_BASE64_STRING);
+    const result = 'image/png';
 
-    equal(fileType, 'image/png');
+    equal(getFileType(MOCKED_BASE64_STRING), result);
   });
 });
