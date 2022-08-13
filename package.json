@@ -11,8 +11,12 @@
     "react",
     "files",
     "blob",
+    "base64",
     "browser",
-    "easy"
+    "easy",
+    "easy-to-use",
+    "open-in-browser",
+    "open-in-new-tab"
   ],
   "author": "Martik Avagyan <martikavagyan1@gmail.com> (https://github.com/m-avagyan)",
   "homepage": "https://github.com/m-avagyan/ublob#readme",
@@ -37,12 +41,13 @@
   ],
   "scripts": {
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "tslint": "tslint --fix -c ./tslint.json 'src/**/*.ts'",
     "test": "mocha",
-    "test:coverage": "nyc --reporter=html mocha",
-    "tslint": "tslint --fix -c ./tslint.json 'src/**/*.ts'"
+    "test:coverage": "nyc --reporter=html mocha"
   },
   "devDependencies": {
     "@types/assert": "^1.5.6",
+    "@types/jsdom": "^20.0.0",
     "@types/mocha": "^9.1.1",
     "assert": "^2.0.0",
     "mocha": "^10.0.0",
