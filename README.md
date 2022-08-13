@@ -1,7 +1,7 @@
 ## Ublob
 
 **Helper module for working with files.** <br />
-Working with files on JavaScript is very easy if you are using Ublob!
+Working with files on JavaScript/TypeScript is very easy if you are using Ublob!
 
 **Author**
 
