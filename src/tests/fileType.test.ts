@@ -16,6 +16,6 @@ describe('getting the file type', () => {
   it('should return the file type', () => {
     const fileType = getFileType(MOCKED_BASE64_STRING);
 
-    equal(fileType, 'png');
+    equal(fileType, 'image/png');
   });
 });
