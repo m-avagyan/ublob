@@ -1,2 +1,11 @@
+# modules
 /node_modules*
 /example*
+
+# tests
+/coverage*
+/.nyc_output*
+
+# misc
+yarn-debug.log*
+yarn-error.log*

@@ -55,6 +55,15 @@ const handleOpen = (blob) =>
   });
 ```
 
+- `getAvailableFileTypes`: getting the available file types
+
+```javascript
+import { getAvailableFileTypes } from 'ublob';
+
+const availableFileTypes = getAvailableFileTypes();
+// use this list where you want
+```
+
 ---
 
 **Copyright (c) 2022 [Martik Avagyan](https://github.com/m-avagyan)**

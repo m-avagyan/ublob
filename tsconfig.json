@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "module": "ES2020",
+    "lib": ["es6", "dom", "es2017"],
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
+    "declaration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "Node"
   },
-  "include": ["./src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

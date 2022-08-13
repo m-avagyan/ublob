@@ -29,7 +29,7 @@ const open = (blob: string, configs = defaultConfigs): void | Error => {
   }
 
   setTimeout(() => {
-    if (fileType === 'pdf') {
+    if (fileType === 'application/pdf') {
       const iframe = document.createElement('iframe');
 
       body.appendChild(iframe);
