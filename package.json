@@ -43,7 +43,8 @@
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "tslint": "tslint --fix -c ./tslint.json 'src/**/*.ts'",
     "test": "mocha",
-    "test:coverage": "nyc --reporter=html mocha"
+    "test:clean": "rm -rf .nyc_output && rm -rf ./coverage",
+    "test:coverage": "yarn test:clean && nyc --reporter=html mocha"
   },
   "devDependencies": {
     "@types/assert": "^1.5.6",
