@@ -1,14 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "lib": ["es6", "dom", "es2017"],
-    "strict": true,
-    "esModuleInterop": true,
+    "outDir": "lib",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "baseUrl": "src",
     "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "moduleResolution": "Node"
+    "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/"],
+  "exclude": ["node_modules/"]
 }

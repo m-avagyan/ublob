@@ -2,10 +2,12 @@
 /node_modules*
 /example*
 
-# tests
-/coverage*
-/.nyc_output*
+# build
+/lib
 
 # misc
 yarn-debug.log*
 yarn-error.log*
+
+# other
+.npmrc
