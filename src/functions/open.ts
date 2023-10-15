@@ -1,4 +1,4 @@
-import getFileType from './fileType';
+import getFileType from "./file-type";
 
 type TConfigs = {
   title?: string;
@@ -7,16 +7,16 @@ type TConfigs = {
 };
 
 const defaultConfigs: TConfigs = {
-  title: '',
-  width: '100%',
-  height: 'auto',
+  title: "",
+  width: "100%",
+  height: "auto",
 };
 
 const open = (blob: string, configs = defaultConfigs): void | Error => {
-  const tab = window.open('about:blank');
+  const tab = window.open("about:blank");
 
   if (!tab) {
-    throw new Error('The tab is not opened.');
+    throw new Error("The tab is not opened.");
   }
 
   const body = tab.document.body;
@@ -29,25 +29,25 @@ const open = (blob: string, configs = defaultConfigs): void | Error => {
   }
 
   setTimeout(() => {
-    if (fileType === 'application/pdf') {
-      const iframe = document.createElement('iframe');
+    if (fileType === "application/pdf") {
+      const iframe = document.createElement("iframe");
 
       body.appendChild(iframe);
 
       iframe.src = blob;
 
-      iframe.style.width = width || '100%';
-      iframe.style.height = height || '100%';
+      iframe.style.width = width || "100%";
+      iframe.style.height = height || "100%";
     } else {
-      const image = tab.document.createElement('img');
+      const image = tab.document.createElement("img");
 
       body.appendChild(image);
       image.src = blob;
 
-      image.style.width = width || '100%';
-      image.style.height = height || 'auto';
-      image.style.display = 'block';
-      image.style.margin = '0 auto';
+      image.style.width = width || "100%";
+      image.style.height = height || "auto";
+      image.style.display = "block";
+      image.style.margin = "0 auto";
     }
   }, 0);
 };

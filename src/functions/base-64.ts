@@ -1,6 +1,6 @@
 const toBase64 = (file: File): Promise<string | ArrayBuffer | null> | Error => {
   if (!file || !file?.type) {
-    return new Error('The parameter must be a file.');
+    return new Error("The parameter must be a file.");
   }
 
   return new Promise((resolve, reject) => {

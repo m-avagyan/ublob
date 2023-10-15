@@ -45,20 +45,20 @@ toBase64(file)
 - `open`: open blob url in browser new tab
 
 ```javascript
-import { open } from 'ublob';
+import { open } from "ublob";
 
 const handleOpen = (blob) =>
   open(blob, {
-    title: 'Ublob PDF',
-    width: '100%',
-    height: '100%',
+    title: "Ublob PDF",
+    width: "100%",
+    height: "100%",
   });
 ```
 
 - `getAvailableFileTypes`: getting the available file types
 
 ```javascript
-import { getAvailableFileTypes } from 'ublob';
+import { getAvailableFileTypes } from "ublob";
 
 const availableFileTypes = getAvailableFileTypes();
 // use this list where you want

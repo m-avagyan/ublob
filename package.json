@@ -1,6 +1,6 @@
 {
   "name": "ublob",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Helper module for working with files.",
   "keywords": [
     "npm",
@@ -17,7 +17,7 @@
     "open-in-browser",
     "open-in-new-tab"
   ],
-  "author": "Martik Avagyan <martikavagyan1@gmail.com> (https://github.com/m-avagyan)",
+  "author": "Martik Avagyan <dev@martikavagyan.com> (https://github.com/m-avagyan)",
   "homepage": "https://github.com/m-avagyan/ublob#readme",
   "repository": {
     "type": "git",
@@ -26,20 +26,27 @@
   "bugs": {
     "url": "https://github.com/m-avagyan/ublob/issues"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=6.0.0",
     "yarn": ">=1.0.0"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rm -rf lib && tsc",
-    "build:watch": "rm -rf lib && tsc -w"
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "build": "rm -rf dist && tsc",
+    "build:watch": "rm -rf dist && tsc -w"
   },
   "devDependencies": {
+    "@types/jest": "^29.2.4",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
     "typescript": "^4.8.3"
   }
 }
