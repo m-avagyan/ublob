@@ -1,26 +1,25 @@
-## Ublob
+# ublob
 
-**Helper module for working with files.** <br />
-Working with files on JavaScript/TypeScript is very easy if you are using Ublob!
+Helper module for working with files.
 
-**Author**
+## Installation
 
-- name: _Martik Avagyan_
-- email: _<martikavagyan1@gmail.com>_
-- github: _[m-avagyan](https://github.com/m-avagyan)_
+```bash
+npm install ublob --save
+```
 
-## Getting started
+or
 
-**Installation**
+```bash
+yarn add ublob
+```
 
-- `npm install ublob` or `yarn add ublob`
-
-**Example**
+## Usage
 
 - `toBase64`: convert file to base 64 string
 
-```javascript
-import { toBase64 } from 'ublob';
+```typescript
+import { toBase64 } from "ublob";
 
 toBase64(file)
   .catch((error) => console.log(error))
@@ -31,8 +30,8 @@ toBase64(file)
 
 - `getFileType`: getting the file type
 
-```javascript
-import { getFileType, toBase64 } from 'ublob';
+```typescript
+import { getFileType, toBase64 } from "ublob";
 
 toBase64(file)
   .catch((error) => console.log(error))
@@ -44,7 +43,7 @@ toBase64(file)
 
 - `open`: open blob url in browser new tab
 
-```javascript
+```typescript
 import { open } from "ublob";
 
 const handleOpen = (blob) =>
@@ -57,13 +56,25 @@ const handleOpen = (blob) =>
 
 - `getAvailableFileTypes`: getting the available file types
 
-```javascript
+```typescript
 import { getAvailableFileTypes } from "ublob";
 
 const availableFileTypes = getAvailableFileTypes();
 // use this list where you want
 ```
 
----
+## Contributing
 
-**Copyright (c) 2022 [Martik Avagyan](https://github.com/m-avagyan)**
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Author
+
+**Martik Avagyan**
+
+- Website: [martikavagyan.com](https://martikavagyan.com)
+- Twitter: [@martikavagyan](https://twitter.com/martikavagyan)
+- GitHub: [@m-avagyan](https://github.com/m-avagyan)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
